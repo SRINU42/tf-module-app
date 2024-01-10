@@ -1,7 +1,7 @@
 resource "null_resource" "test" {
-#    triggers = {
-#        xyz = timestamp()
-#    }
+    triggers = {
+        xyz = timestamp()
+    }
     provisioner "local-exec" {
         command = "echo Hello World -ENV- ${var.env}"
     }
