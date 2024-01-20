@@ -54,7 +54,7 @@ resource "aws_iam_instance_profile" "instance_profile" {
 }
 
 resource "aws_iam_policy_attachment" "policy-attach" {
-  name       = "${var.component}-$(var.env)-ec2-role"
+#  name       = "${var.component}-$(var.env)-ec2-role"
   roles      = [aws_iam_role.role.name]
   policy_arn = aws_iam_policy.policy.arn
 }
